@@ -1,0 +1,16 @@
+/* 홈페이지 메인 */
+.JoinPageArea{
+    width: 100%;
+    height: 40em;
+}
+
+/* 상품 영역 */
+.JoinArea{
+    width: 100%;
+    max-width: 75rem;
+    min-height: 4.5rem;
+    margin: auto;
+    display: flex;
+    justify-content : center;
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,69 @@
+/* 헤더 전체 */
+.headerArea{
+    width: 100%;
+    height: 10em;
+}
+
+/* 회원정보 영역 */
+.profileArea{
+    height: 2em;
+    width: 75rem;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin: auto;
+}
+
+.profileButton{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.profileButton div {
+    margin-left: 1em;
+}
+
+
+/* 카테고리 영역 */
+.categoryArea {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    max-width: 75em;
+    margin: auto;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.logoArea {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 9em;
+    height: 3em;
+}
+
+.categoryList {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.categoryButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.categoryButton div{
+    margin-left: 1em;
+}
