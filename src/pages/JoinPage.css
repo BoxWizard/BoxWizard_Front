@@ -14,3 +14,42 @@
     justify-content : center;
     font-family: 'Roboto', sans-serif;
 }
+
+.JoinTitle {
+    font-size: x-large;
+    font-weight: bold;
+    width: 40em;
+}
+
+.JoinContent {
+    font-size: medium;
+    padding-left: 20em;
+}
+
+.IdCheckButton{
+    width: 10em;
+    height: 2.5em;
+    margin-left: 1em;
+}
+
+.JoinButton{
+    width: 9em;
+    height: 2.5em;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.JoinContent input{
+    width: 20em;
+    height: 2em;
+}
+
+.JoinContentTitle {
+    padding-top: 1em;
+}
+
+.JoinContentDesc {
+    font-size: small;
+    font-weight: 900;
+}

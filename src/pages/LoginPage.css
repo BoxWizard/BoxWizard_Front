@@ -14,3 +14,30 @@
     justify-content : center;
     font-family: 'Roboto', sans-serif;
 }
+
+.LoginTitle {
+    font-size: x-large;
+    font-weight: bold;
+    width: 40em;
+}
+
+.LoginContent {
+    font-size: medium;
+    padding-left: 20em;
+}
+
+.LoginContent button{
+    width: 20.5em;
+    height: 3em;
+    margin-top: 2em;
+}
+
+.LoginContent input{
+    width: 20em;
+    height: 2em;
+}
+
+.LoginContentTitle {
+    padding-top: 1em;
+}
+
