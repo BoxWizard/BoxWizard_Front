@@ -24,6 +24,7 @@
 .JoinContent {
     font-size: medium;
     padding-left: 20em;
+    padding-top: 3em;
 }
 
 .IdCheckButton{
@@ -52,4 +53,9 @@
 .JoinContentDesc {
     font-size: small;
     font-weight: 900;
+}
+
+.error {
+    color: red;
+    font-size: xx-small;
 }

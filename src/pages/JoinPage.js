@@ -1,66 +1,164 @@
 import './JoinPage.css'
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function JoinPage() {
-    const [id, setId] = useState("");
-    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
-    const onChangeId = (e) => {
-        const currentId = e.target.value;
-        setId(currentId);
-        const idRegExp = /^[a-zA-z0-9]{3,12}$/;
-     
-        if (!idRegExp.test(currentId)) {
-            
-        } else {
+    //  회원가입 정보
+    const intialValues = { 
+        id: "",
+        password: "",
+        name: "",
+        phoneNumber: "",
+        address: ""   
+    };
+    const [ formValues, setFormValues ] = useState(intialValues);
+    const [ formErrors, setFormErrors ] = useState({});
+    const [ isSubmitting, setIsSubmitting ] = useState(false);
 
-        }
+    const submitFrom = () => {
+        console.log(formValues);
     };
 
-    const onChangePassword = (e) => {
-        const currentPassword = e.target.value;
-        setPassword(currentPassword);
-        const passwordRegExp = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,14}$/;
-     
-        if (!passwordRegExp.test(currentPassword)) {
-
-        } else {
-
-        }
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormValues({ ...formValues, [name]: value });
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setFormErrors(validate(formValues));
+        setIsSubmitting(true);
+    }
+
+    const validate = (values) => {
+        let errors = {};
+
+        const idRegex = /^[a-zA-Z0-9]{3,12}$/;
+        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,14}$/;
+
+        if(!values.id) {
+            errors.id = "아이디를 입력해주세요!";
+        }else if (!idRegex.test(values.id)){
+            errors.id = "아이디 입력 정보를 확인해주세요!";
+        }
+
+        if(!values.password) {
+            errors.password = "비밀번호를 입력해주세요!";
+        }else if (!passwordRegex.test(values.password)){
+            errors.password = "비밀번호 입력 정보를 확인해주세요!";
+        }
+
+        if(!values.passwordConfirm) {
+            errors.passwordConfirm = "비밀번호를 입력해주세요!";
+        }else if (values.password !== values.passwordConfirm){
+            errors.passwordConfirm = "비밀번호를 확인해주세요!";
+        }
+
+        if(!values.name) {
+            errors.name = "이름을 입력해주세요!";
+        }else if (values.name.length < 2){
+            errors.name = "이름을 2자이상 입력해주세요!";
+        }
+
+        if(!values.phoneNumber) {
+            errors.phoneNumber = "전화번호를 입력해주세요!";
+        }
+
+        if(!values.address) {
+            errors.address = "주소를 입력해주세요!";
+        }
+
+        return errors;
+    }
+
+    // useEffect(() => {
+    //     if(Object.keys(formErrors).length === 0 && isSubmitting){
+    //         submitFrom();
+    //     }
+    // }, [formErrors]);
 
     return (
         <div className='JoinPageArea'>
             <div className='JoinArea'>
-                <form>
+                <form onSubmit={handleSubmit} noValidate>
                     <div className='JoinTitle'> 회원가입 </div>
                     <hr/>
                     <div className='JoinContent'>
                         <div className='JoinContentTitle'> 아이디 </div>
-                        <input name="id" onChange={onChangeId} />
+                        <input type="id"
+                            name="id"
+                            id="id"
+                            value={formValues.id}
+                            onChange={handleChange}
+                            className={formErrors.id && "input-error"} />
                         <button className='IdCheckButton'>중복확인</button>
-                        <div className='JoinContentDesc' name="idDesc" >* 아이디는 영문 또는 숫자만 입력해주세요.</div>
+                        <div className='JoinContentDesc' name="idDesc" >* 아이디는 영문 또는 숫자만 입력해주세요. (3 ~ 12자)</div>
+                        {formErrors.id && (
+                            <span className="error">{formErrors.id}</span>
+                        )}
 
                         <div className='JoinContentTitle'> 비밀번호 </div>
-                        <input name="password" onChange={onChangePassword} />
-                        <div className='JoinContentDesc'>* 비밀번호는 영문, 숫자, 특수문자가 모두 포함되게 입력해주세요.</div>
+                        <input type="password"
+                            name="password"
+                            id="password"
+                            value={formValues.password}
+                            onChange={handleChange}
+                            className={formErrors.password && "input-error"} />
+                        <div className='JoinContentDesc'>* 비밀번호는 영문, 숫자, 특수문자가 모두 포함되게 입력해주세요. (8 ~ 14자)</div>
+                        {formErrors.password && (
+                            <span className="error">{formErrors.password}</span>
+                        )}
+                        
 
                         <div className='JoinContentTitle'> 비밀번호 확인 </div>
-                        <input name="passwordConfirm" />
+                        <input type="password"
+                            name="passwordConfirm"
+                            id="passwordConfirm"
+                            value={formValues.passwordConfirm}
+                            onChange={handleChange}
+                            className={formErrors.passwordConfirm && "input-error"} />
+                        {formErrors.passwordConfirm && (
+                            <div><span className="error">{formErrors.passwordConfirm}</span></div>
+                        )}
 
                         <div className='JoinContentTitle'> 이름 </div>
-                        <input name="name"  />
+                        <input type="name"
+                            name="name"
+                            id="name"
+                            value={formValues.name}
+                            onChange={handleChange}
+                            className={formErrors.name && "input-error"} />
+                        {formErrors.name && (
+                            <div><span className="error">{formErrors.name}</span></div>
+                        )}
 
                         <div className='JoinContentTitle'> 전화번호 </div>
-                        <input name="phoneNumber"  />
+                        <input type="phoneNumber"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                            value={formValues.phoneNumber}
+                            onChange={handleChange}
+                            className={formErrors.phoneNumber && "input-error"} />
+                        {formErrors.phoneNumber && (
+                            <div><span className="error">{formErrors.phoneNumber}</span></div>
+                        )}
 
                         <div className='JoinContentTitle'> 주소 </div>
-                        <input name="address" />
+                        <input type="address"
+                            name="address"
+                            id="address"
+                            value={formValues.address}
+                            onChange={handleChange}
+                            className={formErrors.address && "input-error"} />
+                        {formErrors.address && (
+                            <div><span className="error">{formErrors.address}</span></div>
+                        )}
                         <div></div>
 
-                        <button className='JoinButton'> 회원가입 </button>
-                        <button className='JoinButton'>취소</button>
+                        <button className='JoinButton' type="submit"> 회원가입 </button>
+                        <button className='JoinButton' type='button'>취소</button>
                     </div>
                 </form>
 
