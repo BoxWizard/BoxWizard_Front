@@ -13,6 +13,7 @@ function JoinPage() {
         phoneNumber: "",
         address: ""   
     };
+    
     const [ formValues, setFormValues ] = useState(intialValues);
     const [ formErrors, setFormErrors ] = useState({});
     const [ isSubmitting, setIsSubmitting ] = useState(false);
@@ -93,7 +94,7 @@ function JoinPage() {
                             value={formValues.id}
                             onChange={handleChange}
                             className={formErrors.id && "input-error"} />
-                        <button className='IdCheckButton'>중복확인</button>
+                        <button className='IdCheckButton' type='button'>중복확인</button>
                         <div className='JoinContentDesc' name="idDesc" >* 아이디는 영문 또는 숫자만 입력해주세요. (3 ~ 12자)</div>
                         {formErrors.id && (
                             <span className="error">{formErrors.id}</span>
