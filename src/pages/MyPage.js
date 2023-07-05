@@ -1,8 +1,7 @@
-import './MyPage.css'
 
 function MyPage() {
     return (
-        <div className='MyPageArea'>
+        <div className='PageArea'>
             <div className='MyArea'>
                 <table>
                     <thead>

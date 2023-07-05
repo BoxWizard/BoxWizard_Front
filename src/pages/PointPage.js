@@ -1,9 +1,8 @@
 import Roulette from '../assets/roulette.png'
-import './PointPage.css'
 
 function RoulettePage() {
     return (
-        <div className='RoulettePageArea'>
+        <div className='PageArea'>
             <div className='RouletteArea'>
                 <div>
                     <img src={Roulette} alt='roulette' width='50%' />

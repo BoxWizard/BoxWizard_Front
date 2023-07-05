@@ -1,4 +1,3 @@
-import './JoinPage.css'
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,7 +15,7 @@ function JoinPage() {
     
     const [ formValues, setFormValues ] = useState(intialValues);
     const [ formErrors, setFormErrors ] = useState({});
-    const [ isSubmitting, setIsSubmitting ] = useState(false);
+    // const [ isSubmitting, setIsSubmitting ] = useState(false);
 
     const submitFrom = () => {
         console.log(formValues);
@@ -30,7 +29,7 @@ function JoinPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setFormErrors(validate(formValues));
-        setIsSubmitting(true);
+        // setIsSubmitting(true);
     }
 
     const validate = (values) => {
@@ -81,7 +80,7 @@ function JoinPage() {
     // }, [formErrors]);
 
     return (
-        <div className='JoinPageArea'>
+        <div className='PageArea'>
             <div className='JoinArea'>
                 <form onSubmit={handleSubmit} noValidate>
                     <div className='JoinTitle'> 회원가입 </div>

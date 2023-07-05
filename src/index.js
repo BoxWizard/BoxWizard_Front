@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
+import App from './App';
 import HomePage from './pages/HomePage';
 import JoinPage from './pages/JoinPage';
 import LoginPage from './pages/LoginPage';
@@ -8,6 +10,7 @@ import MyPage from './pages/MyPage';
 import ProductPage from './pages/ProductPage';
 import ProbabilityPage from './pages/ProbabilityPage';
 import PointPage from './pages/PointPage';
+
 import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -19,6 +22,7 @@ root.render(
     <BrowserRouter>
       {/* <Web3ReactProvider getLibrary={getLibrary}> */}
         <Header/>
+        <App />
         <Routes>
           {/* 메인 페이지 및 기본 페이지 */}
           <Route path="/" element={<HomePage/>}/>

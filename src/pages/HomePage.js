@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import Box from '../assets/MainLogo.png'
-import './HomePage.css';
 
 function HomePage() {
     return (
-        <div className='HomePageArea'>
+        <div className='PageArea'>
             <div className='productArea'>
                 <Link to={"/product"} className='productList'>
                     <img src={Box} alt='productImg' className='productImg' />
