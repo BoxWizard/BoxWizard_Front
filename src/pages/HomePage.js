@@ -3,7 +3,7 @@ import Box from '../assets/MainLogo.png'
 
 function HomePage() {
     return (
-        <div className='PageArea'>
+        <div className='pageArea'>
             <div className='productArea'>
                 <Link to={"/product"} className='productList'>
                     <img src={Box} alt='productImg' className='productImg' />

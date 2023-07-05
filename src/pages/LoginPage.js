@@ -25,15 +25,15 @@ function LoginPage() {
 
 
     return (
-        <div className='PageArea'>
-            <div className='LoginArea'>
+        <div className='pageArea'>
+            <div className='loginArea'>
                 <form>
-                    <div className='LoginTitle'> 로그인 </div>
+                    <div className='loginTitle'> 로그인 </div>
                     <hr/>
-                    <div className='LoginContent'>
-                        <div className='LoginContentTitle'> 아이디 </div>
+                    <div className='loginContent'>
+                        <div className='loginContentTitle'> 아이디 </div>
                         <input />
-                        <div className='LoginContentTitle'> 비밀번호 </div>
+                        <div className='loginContentTitle'> 비밀번호 </div>
                         <input />
                         <div></div>
                         <button type="submit"> 로그인 </button>

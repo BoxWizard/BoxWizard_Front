@@ -7,7 +7,7 @@
 /* 회원정보 영역 */
 .profileArea{
   height: 2em;
-  width: 75rem;
+  width: 80rem;
   display: flex;
   align-items: center;
   text-align: right;
@@ -32,7 +32,7 @@
   height: 7rem;
   width: 100%;
   display: flex;
-  max-width: 75em;
+  max-width: 80em;
   margin: auto;
   margin-bottom: 1rem;
   justify-content: space-between;
@@ -71,7 +71,7 @@
 
 
 /* 홈페이지 메인 */
-.PageArea{
+.pageArea{
   width: 100%;
   height: 50em;
 }
@@ -79,13 +79,12 @@
 /* 상품 영역 */
 .productArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
-  font-family: 'Roboto', sans-serif;
 }
 
 .productList {
@@ -103,40 +102,39 @@
 /* 로그인 페이지 */
 
 /* 상품 영역 */
-.LoginArea{
+.loginArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   justify-content : center;
-  font-family: 'Roboto', sans-serif;
 }
 
-.LoginTitle {
+.loginTitle {
   font-size: x-large;
   font-weight: bold;
   width: 40em;
 }
 
-.LoginContent {
+.loginContent {
   font-size: medium;
   padding-left: 20em;
   padding-top: 3em;
 }
 
-.LoginContent button{
+.loginContent button{
   width: 20.5em;
   height: 3em;
   margin-top: 2em;
 }
 
-.LoginContent input{
+.loginContent input{
   width: 20em;
   height: 2em;
 }
 
-.LoginContentTitle {
+.loginContentTitle {
   padding-top: 1em;
 }
 
@@ -145,35 +143,34 @@
 /* 회원가입 페이지 */
 
 /* 상품 영역 */
-.JoinArea{
+.joinArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   justify-content : center;
-  font-family: 'Roboto', sans-serif;
 }
 
-.JoinTitle {
+.joinTitle {
   font-size: x-large;
   font-weight: bold;
   width: 40em;
 }
 
-.JoinContent {
+.joinContent {
   font-size: medium;
   padding-left: 20em;
   padding-top: 3em;
 }
 
-.IdCheckButton{
+.idCheckButton{
   width: 10em;
   height: 2.5em;
   margin-left: 1em;
 }
 
-.JoinButton{
+.joinButton{
   width: 9em;
   height: 2.5em;
   margin-top: 2em;
@@ -181,16 +178,16 @@
   margin-right: 0.5em;
 }
 
-.JoinContent input{
+.joinContent input{
   width: 20em;
   height: 2em;
 }
 
-.JoinContentTitle {
+.joinContentTitle {
   padding-top: 1em;
 }
 
-.JoinContentDesc {
+.joinContentDesc {
   font-size: small;
   font-weight: 900;
 }
@@ -205,32 +202,26 @@
 /* 마이페이지 메인 */
 
 /* 상품 영역 */
-.MyArea{
+.myArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   justify-content : center;
-  font-family: 'Roboto', sans-serif;
 }
 
 
 /* 포인트 구매 페이지 */
-.RoulettePageArea{
-  width: 100%;
-  height: 40em;
-}
 
 /* 상품 영역 */
-.RouletteArea{
+.rouletteArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   justify-content : center;
-  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -238,102 +229,90 @@
 /* 확률 공지 페이지 */
 
 /* 상품 영역 */
-.ProbabilityArea{
+.probabilityArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;
   justify-content : center;
-  font-family: 'Roboto', sans-serif;
+}
+
+.probabilityTitle{
+  font-size: x-large;
+  font-weight: bold;
+  width: 40em;
 }
 
 .boxImg {
-  width: 9em;
+  width: 6em;
 }
 
-.category-set {
-  margin-top: 3px;
-}
-
-.category-child {
-  margin: 5px;
+.categoryChild {
+  margin: 0.3em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-left: 0;
   border: 1px solid grey;
   background-color: #fff;
-  width: 130px;
-  height: 50px;
-  border-radius: 50px;
+  width: 9em;
+  height: 9em;
+  cursor: pointer;
 }
 
-.category-child:hover {
+.categoryChild:hover {
   font-weight: bolder;
   border-color: black;
 }
 
 .selected {
-  border-style: none;
   font-weight: 800;
   background: rgb(12, 77, 162);
   color: #fff;
 }
 
-.fqa-parent {
+.probabilityContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.probabilityList {
+  width: 90%;
+}
+
+.proTableTitle{
+  font-size: x-large;
+}
+
+.proTableContent {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.faq-list {
+.proTableContent table {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.probabilityContent th {
+  border: 1px solid black;
+}
+
+.proTableName {
   width: 80%;
 }
 
-.faq-card {
-  display: flex;
-  margin-top: 10px;
-  width: 100%;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  border: 1px solid black;
-  border-radius: 20px;
-  flex-direction: column;
+.proTablePercent {
+  width: 20%;
 }
 
-.faq-card-title {
-  display: flex;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  align-items: center;
-  cursor: pointer;
+.probabilityContent td {
+  border: 1px solid gray;
 }
 
-.faq-card-answer {
-  position: relative;
-  padding-top: 1rem;
-  padding-bottom: 1.5rem;
-  padding-right: 2rem;
-  border: 0px solid rgba(225,228,230,.5);
-  border-top-width: 1px;
-}
-
-.faq-card-none {
-  display: none;
-}
-
-.question-mark {
-  color: rgb(12, 77, 162);
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.answer-mark {
-  color: skyblue;
-  font-size: 20px;
-  margin-right: 10px;
-}
 
 
 
@@ -342,7 +321,7 @@
 /* 상품 영역 */
 .productArea{
   width: 100%;
-  max-width: 75rem;
+  max-width: 80rem;
   min-height: 4.5rem;
   margin: auto;
   display: flex;

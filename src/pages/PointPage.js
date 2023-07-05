@@ -2,7 +2,7 @@ import Roulette from '../assets/roulette.png'
 
 function RoulettePage() {
     return (
-        <div className='PageArea'>
+        <div className='pageArea'>
             <div className='RouletteArea'>
                 <div>
                     <img src={Roulette} alt='roulette' width='50%' />

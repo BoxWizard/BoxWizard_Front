@@ -2,7 +2,7 @@ import Box from '../assets/MainLogo.png'
 
 function ProductPage() {
     return (
-        <div className='PageArea'>
+        <div className='pageArea'>
             <div className='productArea'>
                 <div>
                     <img src={Box} alt='boximg' />

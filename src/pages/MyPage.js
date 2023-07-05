@@ -1,8 +1,8 @@
 
 function MyPage() {
     return (
-        <div className='PageArea'>
-            <div className='MyArea'>
+        <div className='pageArea'>
+            <div className='myArea'>
                 <table>
                     <thead>
                         <tr>
