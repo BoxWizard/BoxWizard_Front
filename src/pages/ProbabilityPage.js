@@ -3,32 +3,39 @@ import ProbabilityTable from '../components/ProbabilityTable'
 
 const categories = [
     {
-        name: "다이아 상자",
-        value: "diaBox",
+      id: 1,
+      name: "다이아 상자",
+      value: "diaBox",
     },
     {
-        name: "플래티넘 상자",
-        value: "platinumBox",
+      id: 2,
+      name: "플래티넘 상자",
+      value: "platinumBox",
     },
     {
-        name: "골드 상자",
-        value: "goldBox",
+      id: 3,
+      name: "골드 상자",
+      value: "goldBox",
     },
     {
-        name: "실버 상자",
-        value: "sliverBox",
+      id: 4,
+      name: "실버 상자",
+      value: "sliverBox",
     },
     {
-        name: "브론즈 상자",
-        value: "bronzeBox",
+      id: 5,
+      name: "브론즈 상자",
+      value: "bronzeBox",
     },
     {
-        name: "아이언 상자",
-        value: "ironBox",
+      id: 6,
+      name: "아이언 상자",
+      value: "ironBox",
     },
     {
-        name: "무료 상자",
-        value: "freeBox",
+      id: 7,
+      name: "무료 상자",
+      value: "freeBox",
     },
 ];
 
@@ -137,7 +144,7 @@ function ProbabilityPage() {
     const [category, setCategory] = useState("diaBox");
     const [showList, setShowList] = useState(probaList);
   
-    const getProbability = (item, index) => {
+    const getProbability = (item) => {
       return (
         <div>
           <div className='proTableTitle'>{item.title}</div>
@@ -199,7 +206,7 @@ function ProbabilityPage() {
 
               <div className="probabilityContent">
                 <div className="probabilityList">
-                  {showList.map((item, index) => getProbability(item, index))}     
+                  {showList.map(item => getProbability(item))}     
                 </div>
               </div>
 

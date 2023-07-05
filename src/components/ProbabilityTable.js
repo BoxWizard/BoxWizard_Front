@@ -7,9 +7,9 @@ const ProbabilityTable = ({ categories, category, setCategory }) => {
     const makeCategories = () => {
         if (categories.length === 0) return;
     
-        return categories.map((item, idx) => (
+        return categories.map(item => (
           <div
-            key={idx}
+            key={item.id}
             className={
               item.value === category ? "categoryChild selected" : "categoryChild"
             }
